@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "EA Team Builder Tools",
+  "version": "1.1.0",
+  "host_permissions": [
+    "https://ea.com/games/college-football/team-builder/*",
+    "https://www.ea.com/games/college-football/team-builder/*",
+    "https://ea.com/games/madden/team-builder/*",
+    "https://www.ea.com/games/madden/team-builder/*",
+    "https://www.ea.com/games/madden-nfl/team-builder/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ea.com/games/college-football/team-builder/*",
+        "https://www.ea.com/games/college-football/team-builder/*",
+        "https://ea.com/games/madden/team-builder/*",
+        "https://www.ea.com/games/madden/team-builder/*",
+        "https://www.ea.com/games/madden-nfl/team-builder/*"
+      ],
+      "js": [
+        "ea-bridge.js",
+        "studio-web-bridge.js",
+        "equipment-web-bridge.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
